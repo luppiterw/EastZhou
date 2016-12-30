@@ -5,7 +5,7 @@ android {
         eastzhou {
             keyAlias 'eastzhou'
             keyPassword 'eastzhou'
-            storeFile file('D:/Android_Projects/EastZhou/eastzhou.jks')
+            storeFile file('eastzhou.jks')
             storePassword 'eastzhou'
         }
     }
@@ -33,9 +33,9 @@ android {
         }
     }
     externalNativeBuild {
-//        cmake {
-//            path "CMakeLists.txt"
-//        }
+        cmake {
+            path "CMakeLists.txt"
+        }
     }
 }
 
