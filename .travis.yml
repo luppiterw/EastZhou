@@ -6,7 +6,9 @@ android:
     - android-24
     - extra-android-m2repository
     - extra-android-support
-
+jdk:
+  - openjdk8
+  
 before_install:
   - chmod +x gradlew
 
