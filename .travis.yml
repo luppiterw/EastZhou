@@ -8,6 +8,11 @@ android:
     - android-24
     - extra-google-m2repository
     - extra-android-m2repository
+
+licenses:
+  - 'android-sdk-preview-license-.+'
+  - 'android-sdk-license-.+'
+  - 'google-gdk-license-.+'
 addons:
   apt_packages:
     - pandoc
