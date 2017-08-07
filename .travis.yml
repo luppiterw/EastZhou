@@ -9,8 +9,8 @@ android:
     - android-25
     - extra-google-m2repository
     - extra-android-m2repository
-    - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
-    - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+    # - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
+    # - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
 licenses:
   - 'android-sdk-preview-license-.+'
   - 'android-sdk-license-.+'
@@ -25,6 +25,8 @@ before_install:
   - git clone https://github.com/urho3d/android-ndk.git $HOME/android-ndk-root
   - export ANDROID_NDK_HOME=$HOME/android-ndk-root
   - chmod +x gradlew
+  - chmod +x .travis-android-license-bugfix.sh
+  - ./.travis-android-license-bugfix.sh
 script:
   - ./gradlew assembleRelease
   # check that all Support section of the README are the same.
